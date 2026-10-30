@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-  api 'com.google.protobuf:protobuf-java:3.25.8'
+  api "com.google.protobuf:protobuf-java:${protobuf_version}"
 
 // Java 9+ requires this to be here for GRPC to compile properly
 // https://github.com/grpc/grpc-java/issues/3633
@@ -27,13 +27,8 @@ sourceSets {
 
 protobuf {
   protoc {
-    artifact = "com.google.protobuf:protoc:3.25.8"
+    artifact = "com.google.protobuf:protoc:${protobuf_version}"
   }
-  generatedFilesBaseDir = "$projectDir/gen"
-}
-
-clean {
-  delete protobuf.generatedFilesBaseDir
 }
 
 idea {

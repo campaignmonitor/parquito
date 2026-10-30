@@ -16,9 +16,9 @@ public interface DataPageWriter {
       final WriteSpec writeSpec,
       final PageType pageType) {
     return switch (pageType) {
-        // TODO
-        //        case DATA_PAGE -> new
-        // DataPageV1Writer(columnChunkWriter.getColumnType().schemaNode(), writeSpec);
+      // TODO
+      //        case DATA_PAGE -> new
+      // DataPageV1Writer(columnChunkWriter.getColumnType().schemaNode(), writeSpec);
       case DATA_PAGE_V2 ->
           new DataPageV2Writer(columnChunkWriter.getColumnType().schemaNode(), writeSpec);
       default -> throw new IllegalArgumentException("Unsupported data page type: " + pageType);
