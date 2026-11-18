@@ -6,7 +6,7 @@ plugins {
 
 spotless {
   java {
-    googleJavaFormat(google_java_format_version)
+    googleJavaFormat('1.22.0')
   }
   groovyGradle {
     target('*.gradle')
@@ -22,7 +22,7 @@ spotless {
 }
 
 dependencies {
-  compileOnly "com.github.spotbugs:spotbugs-annotations:${spotbugs_annotations_version}"
+  compileOnly 'com.github.spotbugs:spotbugs-annotations:4.7.3'
 }
 
 spotbugs {
